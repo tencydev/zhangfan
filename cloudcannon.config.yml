@@ -30,3 +30,8 @@ collections_config:
     icon: cast_connected
     glob:
       - '!_index.md'
+  page_links:
+    path: content/page/links
+    icon: page_info
+    glob:
+      - '!_index.md'
