@@ -4,7 +4,8 @@ links:
   - title: Snipaste
     description: 截图软件，可以把截图钉在桌面上的任何一个地方。
     website: https://www.snipaste.com/#
-    image: /uploads/snipaste-2026-01-06-17-33-36.jpg
+    image: >-
+      https://images.icon-icons.com/3053/PNG/512/snipaste_macos_bigsur_icon_189717.png
   - title: TypeScript
     description: >-
       TypeScript is a typed superset of JavaScript that compiles to plain
