@@ -1,10 +1,10 @@
 ---
 title: 链接/Links
 links:
-  - title: GitHub
-    description: GitHub is the world's largest software development platform.
-    website: https://github.com
-    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
+  - title: Snipaste
+    description: 截图软件，可以把截图钉在桌面上的任何一个地方。
+    website: https://www.snipaste.com/#
+    image: /uploads/logo.svg
   - title: TypeScript
     description: >-
       TypeScript is a typed superset of JavaScript that compiles to plain
