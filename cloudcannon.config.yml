@@ -1,37 +1,56 @@
 paths:
-  static: static
   uploads: static/uploads
+  static: static
+collections_config:
+  content:
+    path: content
+    icon: wysiwyg
+    disable_url: false
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+  post_chinese_test:
+    path: content/post/chinese-test
+    glob:
+      - '!_index.md'
+    icon: cast_connected
+    disable_url: false
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+  page_links:
+    path: content/page/links
+    glob:
+      - '!_index.md'
+    icon: page_info
+    disable_url: false
+    _inputs:
+      $.links[*].image:
+        cascade: true
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+_snippets_imports:
+  hugo:
+    exclude:
+      - hugo_instagram
 timezone: Asia/Shanghai
 markdown:
   engine: commonmark
   options:
-    gfm: true
+    xhtml: false
+    breaks: false
     linkify: false
+    typographer: false
+    spaced_lists: false
+    sentence_per_line: false
+    gfm: true
+    code_block_fences: '```'
+    escape_snippets_in_code_blocks: false
+    treat_indentation_as_code: true
     table: false
     strikethrough: false
     subscript: false
     superscript: false
     heading_ids: false
-    breaks: false
-    xhtml: false
     attributes: false
-    typographer: false
-    treat_indentation_as_code: true
-_snippets_imports:
-  hugo:
-    exclude:
-      - hugo_instagram
-collections_config:
-  content:
-    path: content
-    icon: wysiwyg
-  post_chinese_test:
-    path: content/post/chinese-test
-    icon: cast_connected
-    glob:
-      - '!_index.md'
-  page_links:
-    path: content/page/links
-    icon: page_info
-    glob:
-      - '!_index.md'
