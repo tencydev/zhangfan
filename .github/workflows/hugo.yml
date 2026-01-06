@@ -3,10 +3,10 @@ name: Deploy Hugo to gh-pages
 on:
   push:
     branches:
-      - main  # 监听 main 分支的变动
+      - main
 
 permissions:
-  contents: write  # 显式声明写入权限
+  contents: write
 
 jobs:
   deploy:
@@ -15,21 +15,23 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
+          # 关键点：一定要递归拉取主题子模块
           submodules: recursive
           fetch-depth: 0
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.123.0' # 使用确定的稳定版本
-          extended: true
+          hugo-version: 'latest'
+          extended: true # Stack 主题必须使用 extended 版本
 
       - name: Build
-        run: hugo --minify
+        # 强制指定 baseURL 确保路径万无一失
+        run: hugo --minify --baseURL "https://tencydev.github.io/zhangfan/"
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          publish_branch: gh-pages # 将编译好的网页同步到这里
+          publish_branch: gh-pages
