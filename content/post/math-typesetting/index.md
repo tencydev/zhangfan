@@ -1,19 +1,19 @@
 ---
 author: Hugo Authors
 title: Math Typesetting
-date: 2019-03-08
+date: 2019-03-08T00:00:00Z
 description: A brief guide to setup KaTeX
 math: true
 ---
-
-Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.
-<!--more-->
+Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries. <!--more-->
 
 In this example we will be using [KaTeX](https://katex.org/)
 
-- Create a partial under `/layouts/partials/math.html`
-- Within this partial reference the [Auto-render Extension](https://katex.org/docs/autorender.html) or host these scripts locally.
-- Include the partial in your templates like so:  
+![](/uploads/snipaste-2026-01-12-17-19-55.jpg)
+
+* Create a partial under `/layouts/partials/math.html`
+* Within this partial reference the [Auto-render Extension](https://katex.org/docs/autorender.html) or host these scripts locally.
+* Include the partial in your templates like so:
 
 ```bash
 {{ if or .Params.math .Site.Params.math }}
@@ -21,8 +21,8 @@ In this example we will be using [KaTeX](https://katex.org/)
 {{ end }}
 ```
 
-- To enable KaTeX globally set the parameter `math` to `true` in a project's configuration
-- To enable KaTeX on a per page basis include the parameter `math: true` in content files
+* To enable KaTeX globally set the parameter `math` to `true` in a project's configuration
+* To enable KaTeX on a per page basis include the parameter `math: true` in content files
 
 **Note:** Use the online reference of [Supported TeX Functions](https://katex.org/docs/supported.html)
 
@@ -33,13 +33,10 @@ In this example we will be using [KaTeX](https://katex.org/)
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
 {{ end }}
-{{</ math.inline >}}
+{{< /math.inline >}}
 
 ### Examples
 
-Inline math: $\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…$
+Inline math: $\\varphi = \\dfrac\{1+\\sqrt5\}\{2\}= 1.6180339887…$
 
-Block math:
-$$
- \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } 
-$$
+Block math: $$ \\varphi = 1+\\frac\{1\} \{1+\\frac\{1\} \{1+\\frac\{1\} \{1+\\cdots\} \} \} $$
