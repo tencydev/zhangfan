@@ -247,6 +247,9 @@ alt="Google"
 &lt;p&gt;Eurytus Hector, materna ipsumque ut Politen, nec, nate, ignari, vernum cohaesit sequitur. Vel &lt;strong&gt;mitis temploque&lt;/strong&gt; vocatus, inque alis, &lt;em&gt;oculos nomen&lt;/em&gt; non silvis corpore coniunx ne displicet illa. Crescunt non unus, vidit visa quantum inmiti flumina mortis facto sic: undique a alios vincula sunt iactata abdita! Suspenderat ego fuit tendit: luna, ante urbem Propoetides &lt;strong&gt;parte&lt;/strong&gt;.&lt;/p&gt;</description></item><item><title>Math Typesetting</title><link>https://tencydev.github.io/zhangfan/p/math-typesetting/</link><pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate><guid>https://tencydev.github.io/zhangfan/p/math-typesetting/</guid><description>&lt;p&gt;Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.&lt;/p&gt;
 &lt;p&gt;In this example we will be using &lt;a class="link" href="https://katex.org/" target="_blank" rel="noopener"
 &gt;KaTeX&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://tencydev.github.io/zhangfan/uploads/snipaste-2026-01-12-17-19-55.jpg"
+loading="lazy"
+&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Create a partial under &lt;code&gt;/layouts/partials/math.html&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Within this partial reference the &lt;a class="link" href="https://katex.org/docs/autorender.html" target="_blank" rel="noopener"
@@ -273,8 +276,5 @@ alt="Google"
 &gt;Supported TeX Functions&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="examples"&gt;Examples
 &lt;/h3&gt;&lt;p&gt;Inline math: $\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…$&lt;/p&gt;
-&lt;p&gt;Block math:
-&lt;/p&gt;
-$$
-\varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
-$$</description></item></channel></rss>
+&lt;p&gt;Block math: &lt;/p&gt;
+$$ \\varphi = 1+\\frac\{1\} \{1+\\frac\{1\} \{1+\\frac\{1\} \{1+\\cdots\} \} \} $$</description></item></channel></rss>
